@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+#define endl "\n"
+using namespace std;
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int t;
+	cin>>t;
+	while(t--){
+		int n,s=1e7;
+		cin>>n;
+		int a[n];
+		for(int i=0;i<n;i++) cin>>a[i];
+		sort(a,a+n);
+		for(int i=0;i<n;i++){
+			int l=i+1,r=n-1;
+			while(l<=r){
+				int p=(l+r)/2;
+				if(a[p]==-a[i]){
+					s=0;
+					break;
+				}
+				else if(a[p]>-a[i]){
+					if(abs(a[p]+a[i])<abs(s)) s=a[p]+a[i];
+					r=p-1;
+				}
+				else{
+					if(abs(a[p]+a[i])<abs(s)) s=a[p]+a[i];
+					l=p+1;
+				}
+			}
+			if(s==0) break;
+		}
+		cout<<s<<endl;
+	}
+}
