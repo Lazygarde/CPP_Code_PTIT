@@ -20,7 +20,7 @@ int main(){
 				else if((n-i-1)%4==0) s+=6;
 			}
 		}
-		if(s%5==0) cout<<"YES\n";
-		else cout<<"NO\n";
+		if(s%5==0) cout<<"Yes\n";
+		else cout<<"No\n";
 	}
 }
