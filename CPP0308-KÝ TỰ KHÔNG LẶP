@@ -10,10 +10,8 @@ int main(){
 		string a;
 		cin>>a;
 		int b[26]={},n=a.size();
-		for(int i=0;i<n;i++){
-			b[a[i]-'A']++;
-		}
-		for(int i=0;i<26;i++) if(b[i]==1) cout<<(char)(i+'A');
+		for(int i=0;i<n;i++) b[a[i]-'A']++;
+		for(int i=0;i<a.size();i++) if(b[a[i]-'A']==1) cout<<a[i];
 		cout<<endl;
 	}
 }
