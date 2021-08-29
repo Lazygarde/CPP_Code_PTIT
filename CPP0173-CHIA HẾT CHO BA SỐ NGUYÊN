@@ -21,6 +21,8 @@ int main(){
 		long long s=pow(10,(n-1));
 		long long k=bcnn(x,bcnn(y,z));
 		if(k>=s*10) cout<<-1<<endl;
-		else cout<<(long long)k*ceil(pow(10,n-1)/k)<<endl;
+		else{
+			cout<<k*(long long)ceil(pow(10,n-1)/k)<<endl;
+		}
 	}
 }
