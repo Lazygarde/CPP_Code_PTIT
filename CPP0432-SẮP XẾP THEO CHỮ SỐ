@@ -2,12 +2,14 @@
 #define endl "\n"
 using namespace std;
 bool cmp(string a,string b){
-	int i=0,j=0;
+	int i=0,j=0,k=0;
 	while(a[i]==b[j]){
 		i++;
 		j++;
+		k++;
 		if(i==a.size()) i=0;
 		if(j==b.size()) j=0;
+		if(k==a.size()+b.size()) break;
 	}
 	return a[i]>b[j];
 }
