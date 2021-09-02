@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+struct PhanSo{
+	long long tu,mau;
+};
 long long ucln(long long a,long long b){
     while(b!=0){
         long long x=a%b;
@@ -11,17 +14,33 @@ long long ucln(long long a,long long b){
 long long bcnn(long long a,long long b){
 	return a*b/ucln(a,b);
 }
-int main(){
-	long long a,b,c,d;
-	cin>>a>>b>>c>>d;
-	long long k=ucln(a,b);
-	a/=k;
-	b/=k;
-	k=ucln(c,d);
-	c/=k;
-	d/=k;
-	k=bcnn(b,d);
-	long long e=a*k/b+c*k/d;
-	long long h=ucln(k,e);
-	cout<<e/h<<"/"<<k/h;
+void nhap(struct PhanSo &p){
+	cin>>p.tu>>p.mau;
+}
+void rutgon(struct PhanSo &p){
+	long long k=ucln(p.tu,p.mau);
+	p.tu/=k;
+	p.mau/=k;
+}
+struct PhanSo tong(struct PhanSo p,struct PhanSo q){
+	struct PhanSo x;
+	rutgon(p);
+	rutgon(q);
+	long long k=bcnn(p.mau,q.mau);
+	x.mau=k;
+	long long d1=k/p.mau*p.tu;
+	long long d2=k/q.mau*q.tu;
+	x.tu=d1+d2;
+	rutgon(x);
+	return x;
+}
+void in(struct PhanSo p){
+	cout<<p.tu<<"/"<<p.mau;
+}
+int main() {
+	struct PhanSo p,q;
+	nhap(p); nhap(q);
+	PhanSo t = tong(p,q);
+	in(t);
+	return 0;
 }
