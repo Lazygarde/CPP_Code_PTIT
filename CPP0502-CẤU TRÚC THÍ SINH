@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	string a,b;
+	getline(cin,a);
+	cin>>b;
+	float c,d,e;
+	cin>>c>>d>>e;
+	cout<<a<<" "<<b<<" ";
+	printf("%.1f",c+d+e);
+}
