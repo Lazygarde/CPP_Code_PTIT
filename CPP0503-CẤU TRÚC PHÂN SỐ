@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long ucln(long long a, long long b) {
+    while(b!=0){
+        long long x=a%b;
+        a=b;
+        b=x;
+    }
+    return a;
+}
+int main(){
+	long long a,b;
+	cin>>a>>b;
+	long long k=ucln(a,b);
+	cout<<a/k<<"/"<<b/k;
+}
