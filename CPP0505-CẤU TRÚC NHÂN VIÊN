@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	string a,b,c,d,e,f;
+	getline(cin,a);
+	cin>>b>>c;
+	cin.ignore();
+	getline(cin,d);
+	cin>>e>>f;
+	cout<<"00001 "<<a<<" "<<b<<" "<<c<<" "<<d<<" "<<e<<" "<<f;
+}
