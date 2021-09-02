@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		double a,b,c,d;
+		cin>>a>>b>>c>>d;
+		printf("%.4lf\n",sqrt((c-a)*(c-a)+(d-b)*(d-b)));
+	}
+}
