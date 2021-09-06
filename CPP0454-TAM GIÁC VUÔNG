@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 long long tes(long long a,long long b){
-	long long c=a*a+b*b;
-	long long k=sqrt(c);
-	if(k*k==c) return k;
-	return 0;
+	if(sqrt(a*a+b*b)==(long long)sqrt(a*a+b*b)) return sqrt(a*a+b*b);
+	else return 0;
 }
 int main(){
 	int t;
